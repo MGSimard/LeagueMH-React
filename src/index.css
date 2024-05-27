@@ -1,0 +1,114 @@
+/* CSS FOR NON-COMPONENT, CORE ELEMENTS */
+:root {
+  /* Global Vars, can be used in other css files */
+  /* Design References: https://brand.riotgames.com/en-us/league-of-legends/fundamentals */
+  --lolBlue1: #cdfafa;
+  --lolBlue2: #0ac8b9;
+  --lolBlue3: #0397ab;
+  --lolBlue4: #005a82;
+  --lolBlue5: #0a323c;
+  --lolBlue6: #091428; /*Match History Win BG*/
+  --lolBlue7: #0a1428;
+  --lolGold1: #f0e6d2; /* Headers */
+  --lolGold2: #c8aa6e; /* Light Gold */
+  --lolGold3: #c8aa6e;
+  --lolGold4: #c89b3c; /* Dark Gold Accent Subtitles */
+  --lolGold5: #785a28;
+  --lolGold6: #463714;
+  --lolGold7: #32281e;
+  --lolGrey1: #a09b8c; /* Main body color (Spiegel text) */
+  --lolGrey2: #5b5a56; /* Footer Disclaimers */
+  --lolGrey3: #3c3c41; /* Gray horizontal lines or disabled stuff */
+  --lolGrey4: #1e2328;
+  --lolGreyCool: #1e282d;
+  --lolHexBlack: #010a13; /* Static Backgrounds */
+  --lolGradientBlue: #005a82, #0ac8b9; /* Magic, Hextech */
+  --lolGradientGold: #785a28, #c89b3c; /* Metallics */
+  --lolGradientDark: #091428, #0a1428; /* Background Gradients */
+  --riotRed: #d13639;
+  --lossRed: #280909;
+}
+/* NORMALIZERS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Spiegel", sans-serif;
+  color: var(--lolGrey1);
+  background: #010a13;
+}
+/* LAYOUT COMPONENTS */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 380px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/headerimg.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.header-divider {
+  position: absolute;
+  bottom: -1px;
+  background-image: url(/header_divider_dark.webp);
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 53px;
+}
+/**/
+main,
+footer {
+  padding: 0 2rem;
+}
+section,
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+footer {
+  padding-bottom: 2rem;
+  color: #6c757d;
+}
+footer hr {
+  margin-bottom: 2rem;
+  color: #6c757d;
+}
+/**/
+h1 {
+  font-size: 8rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--lolGold1);
+}
+h1,
+h2 {
+  font-family: "BeaufortForLoL";
+}
+h2 {
+  margin-bottom: 1rem;
+}
+h3 {
+  line-height: 1.12rem;
+}
+img {
+  display: block;
+}
+select,
+button {
+  cursor: pointer;
+}

@@ -1,0 +1,457 @@
+/* CSS FOR CORE COMPONENT ELEMENTS */
+.notFoundContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.notFoundContainer h1 {
+  margin-bottom: 2rem;
+}
+.notFoundStatus {
+  font-style: italic;
+}
+.returnLink {
+  color: var(--lolGold4);
+  margin-top: 2rem;
+  text-decoration: underline;
+}
+.returnLink:hover {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* SEARCH COMPONENTS */
+.sumSearch,
+.sumSearch * {
+  background: #212529;
+}
+.sumSearch {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--lolGrey3);
+  border-radius: 4px;
+}
+.sumSearch h3 {
+  font-size: 1.2rem;
+}
+.sumSearch .ssTwo-Three {
+  display: flex;
+  gap: 1rem;
+  flex-grow: 1;
+}
+.sumSearch input,
+.sumSearch select {
+  border: none;
+  color: var(--lolGrey1);
+  width: 100%;
+  padding: 0.375rem 0;
+}
+.sumSearch *:focus {
+  outline: 1px solid #6c757d;
+}
+.sumSearch *::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.sumSearch .rIdTag_inputContainer {
+  display: flex;
+  color: #6c757d;
+  align-items: center;
+}
+.sumSearch .ssThree {
+  width: 8rem;
+}
+.sumSearch button {
+  border: none;
+  color: #6c757d;
+  transition: color 0.1s ease-in-out, border 0.1s ease-in-out;
+}
+.sumSearch button:hover {
+  color: #fff;
+}
+.sumSearch-home {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.sumSearch-home h3 {
+  margin-bottom: 0.2rem;
+}
+.sumSearch-home .ssTwo {
+  flex-grow: 1;
+}
+.sumSearch-home button {
+  padding: 1rem 2rem;
+}
+.sumSearch-summoner {
+  justify-content: space-between;
+  flex-direction: column;
+  margin-left: auto;
+  width: 20rem;
+  flex-shrink: 0;
+}
+.sumSearch-summoner button {
+  border: 1px solid #6c757d;
+  padding: 0.5rem 2rem;
+}
+.sumSearch-summoner button:hover {
+  border: 1px solid #fff;
+}
+
+/* PROFILE CARD */
+.profile-card {
+  display: flex;
+}
+.icon-container {
+  position: relative;
+  width: 15rem;
+  flex-shrink: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.icon-container img {
+  width: 100%;
+}
+.icon-container small {
+  font-weight: 700;
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  width: 6rem;
+}
+.profileTable-container {
+  padding: 0 1rem;
+  flex-grow: 1;
+}
+.pBold {
+  display: inline-block;
+  font-weight: 700;
+}
+.pBold span {
+  font-weight: 400;
+  color: var(--lolGrey2);
+}
+.pLabel {
+  font-size: 1rem;
+  color: var(--lolGold4);
+  vertical-align: top;
+  margin-left: 0.5rem;
+  font-weight: 400;
+}
+.profileTable {
+  margin-top: 1rem;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+.profileTable tr {
+  border-bottom: 1px solid var(--lolGrey3);
+}
+.profileTable tr:hover {
+  background: var(--lolGreyCool);
+}
+.profileTable th {
+  padding: 0.5rem 0;
+  width: 10rem;
+  text-align: start;
+}
+.profileTable td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/**/
+/* MATCH HISTORY */
+.match-history {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+/**/
+/* MATCH CARD*/
+.match-card {
+  color: var(--lolGold1);
+  display: flex;
+  background-color: #333;
+  border-radius: 4px;
+  overflow: hidden;
+}
+/* CHAMP FRAME, MODE, LENGTH, TIME SINCE, OUTCOME, LEVEL */
+.mc-left {
+  position: relative;
+  display: flex;
+  width: 15rem;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.4rem 0 0.4rem 0.4rem;
+  text-shadow: 0 0 5px black;
+}
+.data-top,
+.data-bot {
+  position: relative;
+  z-index: 2;
+}
+.dt1,
+.data-bot {
+  display: flex;
+  justify-content: space-between;
+}
+.matchMode,
+.matchOutcome,
+.matchLevel {
+  font-weight: 700;
+}
+
+.matchMode {
+  text-transform: uppercase;
+}
+.matchTimeSince {
+  font-style: italic;
+}
+.outcomeWin {
+  color: var(--lolBlue2);
+}
+.outcomeLoss {
+  color: var(--riotRed);
+}
+.mc-portrait {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0));
+}
+/**/
+/* RUNES, SUMMONERS, ITEMS */
+.mc-right {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  padding: 1rem;
+}
+.sums-runes-container {
+  display: flex;
+  gap: 0.5rem;
+}
+.sums,
+.runes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sum,
+.rune,
+.trinket,
+.item {
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.items-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+.trinket {
+  border-radius: 999rem;
+}
+/**/
+/* KDA SECTION */
+.kda-container * {
+  width: 10rem;
+  text-align: center;
+}
+.kda {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.kda-deaths {
+  color: var(--riotRed);
+}
+.kda-slash {
+  color: var(--lolGrey3);
+  font-weight: 400;
+}
+.kda-ratio,
+.creepscore {
+  white-space: nowrap;
+  font-size: 1.4rem;
+}
+/**/
+/* TEAMS SECTION */
+.match-card ul {
+  list-style: none;
+}
+.teams-container {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+  overflow: hidden;
+}
+.teams-container li a {
+  display: flex;
+  align-items: center;
+}
+.teams-container li:hover {
+  text-decoration: underline;
+}
+.participantChamp {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 999rem;
+  background-size: cover;
+}
+.teams-container span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.teams-container li {
+  line-height: 1.5rem;
+  font-size: 1.4rem;
+}
+.teams-container li:not(:last-child) {
+  margin-bottom: 0.4rem;
+}
+.teamsArena {
+  display: grid;
+  column-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+.teamsArena li {
+  width: 125px;
+}
+.teamsStandard {
+  width: 125px;
+}
+/* HOMEPAGE */
+.home-main section {
+  padding: 5rem 0;
+}
+.search-section h2,
+.search-section small {
+  text-align: center;
+}
+.search-section small {
+  display: block;
+  margin-bottom: 2rem;
+}
+/* yes this is jank, yes this is also my app */
+hr:not(footer hr) {
+  margin-bottom: 5rem;
+}
+.feature-list,
+.feature-list ul {
+  margin-left: 2rem;
+}
+.feature-list a {
+  color: var(--lolGold4);
+  text-decoration: underline;
+}
+.feature-list a:hover {
+  color: white;
+}
+.feature-list li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.feature-list ul {
+  margin-top: 1rem;
+}
+/**/
+.spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.spinner {
+  border: 10px solid var(--lolGrey3);
+  border-top-color: var(--lolGold4);
+  animation: spin 3s linear infinite;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 999rem;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg); /* Start spinning from 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* End spinning at 360 degrees (full rotation) */
+  }
+}
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+  header h1 {
+    font-size: 10vw;
+  }
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .icon-container {
+    display: none;
+    order: 2;
+  }
+  .profileTable-container {
+    order: 3;
+  }
+  .sumSearch-summoner {
+    width: 100%;
+    order: 1;
+  }
+  .sumSearch-summoner .ssTwo {
+    width: 100%;
+  }
+  .sumSearch-summoner .ssThree {
+    margin-left: auto;
+  }
+  /* Enjoy some cursed low quality champion images */
+  /* Another solution would be to create a version with smaller images */
+  /* And moving the usernames into a folded section of the card, making it clickable to open*/
+  .mc-right {
+    flex-wrap: wrap;
+  }
+  .teams-container {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  body * {
+    display: none;
+  }
+  body::after {
+    content: "ok stop bro that's enough";
+  }
+}
