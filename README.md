@@ -33,7 +33,7 @@ As per the example on the app's landing page; select a region, enter a summoner 
 
 ## Contact
 
-MGSimard - g.marcgs@gmail.com
+MGSimard - g.marcgs@gmail.com  
 [@MGSimard on X](https://x.com/MGSimard)
 
 For more info, view my portfolio at [mgsimard.github.io](https://mgsimard.github.io). Resume attached.
