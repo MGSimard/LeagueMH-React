@@ -34,4 +34,7 @@ As per the example on the app's landing page; select a region, enter a summoner 
 ## Contact
 
 MGSimard - g.marcgs@gmail.com
-Project Link: [https://github.com/MGSimard/LeagueMH-React](https://github.com/MGSimard/LeagueMH-React)
+Project Link: [https://github.com/MGSimard/LeagueMH-React](https://github.com/MGSimard/LeagueMH-React)  
+[@MGSimard on X](https://x.com/MGSimard)
+
+For more info, view my portfolio at [mgsimard.github.io](https://mgsimard.github.io). Resume attached.
