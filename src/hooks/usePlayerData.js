@@ -31,7 +31,7 @@ export const usePlayerData = (regionPrefix, summoner) => {
     queryKey: ["targetIdentity", summonerName, summonerTag],
     queryFn: async () => {
       const res = await fetch(
-        `https://corsproxy.io/?https://${cluster}.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${summonerName}/${summonerTag}?${apiKey}`
+        `https://${cluster}.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${summonerName}/${summonerTag}?${apiKey}`
       );
       if (!res.ok) throw new Error("There was a problem fetching summoner.");
       return res.json();
@@ -47,7 +47,7 @@ export const usePlayerData = (regionPrefix, summoner) => {
     queryKey: ["targetProfile", summonerName, summonerTag],
     queryFn: async () => {
       const res = await fetch(
-        `https://corsproxy.io/?https://${shard}.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${targetIdentity.puuid}?${apiKey}`
+        `https://${shard}.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${targetIdentity.puuid}?${apiKey}`
       );
       if (!res.ok) throw new Error("There was a problem fetching profile data.");
       return res.json();
@@ -64,7 +64,7 @@ export const usePlayerData = (regionPrefix, summoner) => {
     queryKey: ["targetRank", summonerName, summonerTag],
     queryFn: async () => {
       const res = await fetch(
-        `https://corsproxy.io/?https://${shard}.api.riotgames.com/lol/league/v4/entries/by-summoner/${targetProfile.id}?${apiKey}`
+        `https://${shard}.api.riotgames.com/lol/league/v4/entries/by-summoner/${targetProfile.id}?${apiKey}`
       );
       if (!res.ok) throw new Error("There was a problem fetching rank data.");
       return res.json();
@@ -81,7 +81,7 @@ export const usePlayerData = (regionPrefix, summoner) => {
     queryKey: ["matchIdList", summonerName, summonerTag],
     queryFn: async () => {
       const res = await fetch(
-        `https://corsproxy.io/?https://${cluster}.api.riotgames.com/lol/match/v5/matches/by-puuid/${targetIdentity.puuid}/ids?start=0&count=10&${apiKey}`
+        `https://${cluster}.api.riotgames.com/lol/match/v5/matches/by-puuid/${targetIdentity.puuid}/ids?start=0&count=10&${apiKey}`
       );
       if (!res.ok) throw new Error("There was a problem fetching match history.");
       return res.json();
@@ -98,7 +98,7 @@ export const usePlayerData = (regionPrefix, summoner) => {
     queryFn: async () => {
       return await Promise.all(
         matchIdList.map(async (matchId) =>
-          fetch(`https://corsproxy.io/?https://${cluster}.api.riotgames.com/lol/match/v5/matches/${matchId}?${apiKey}`)
+          fetch(`https://${cluster}.api.riotgames.com/lol/match/v5/matches/${matchId}?${apiKey}`)
             .then((res) => res.json())
             .catch((error) => {
               console.error(`Fetch failed for matchId: ${matchId}`, error);
